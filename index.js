@@ -81,11 +81,9 @@ io.on("connection",(socket)=>{
 		io.sockets.in(currentRoom).emit('extraMoveStopped',currentRoom);
 	})
 	socket.on('snakeBite',({room})=>{
-		console.log(room)
 		io.sockets.in(room).emit('recieveSnakeBite',room);
 	})
 	socket.on('ladderBite',({room})=>{
-		console.log(room)
 		io.sockets.in(room).emit('recieveLadderBite',room);
 	})
 	socket.on('showSnake',({currentRoom})=>{
